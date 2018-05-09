@@ -3,8 +3,12 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { HomePage } from '../pages/home/home';
+// import { ListPage } from '../pages/list/list';
+import { LstChevauxPage } from '../pages/lst-chevaux/lst-chevaux';
+import { LstVentesPage } from '../pages/lst-ventes/lst-ventes';
+import { LstCoursesPage } from '../pages/lst-courses/lst-courses';
+import { LstClientsPage } from '../pages/lst-clients/lst-clients';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +16,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LstChevauxPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +25,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      // { title: 'Home', component: HomePage },
+      // { title: 'List', component: ListPage },
+      { title: 'Chevaux', component: LstChevauxPage },
+      { title: 'Ventes', component: LstVentesPage },
+      { title: 'Courses', component: LstCoursesPage },
+      { title: 'Clients', component: LstClientsPage }
     ];
 
   }
