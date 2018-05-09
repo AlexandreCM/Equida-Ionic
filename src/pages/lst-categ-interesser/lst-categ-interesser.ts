@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VentesProvider} from '../../providers/ventes/ventes';
+import { LstVentesCategPage } from '../lst-ventes-categ/lst-ventes-categ';
 
 /**
  * Generated class for the LstCategInteresserPage page.
@@ -21,7 +22,6 @@ export class LstCategInteresserPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public ventesProvider : VentesProvider) {
       console.log("constr lstCategClient");
       let idClient = this.navParams.get("idClient");
-      console.log("idClient: " + idClient);
       this.lstCategInteresser(idClient);
   }
 
@@ -38,4 +38,8 @@ export class LstCategInteresserPage {
     });
   }
 
+  lstVentesCateg(idCateg: number) {
+    this.navCtrl.push(LstVentesCategPage, {idCateg: idCateg});
+    console.log("methode lstVentesCateg("+idCateg+") revoi vers lst-ventes-categ.ts");
+  }
 }

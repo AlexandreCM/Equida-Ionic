@@ -1,5 +1,5 @@
 <!--
-  Generated template for the LstCategInteresserPage page.
+  Generated template for the LstVentesCategPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -9,16 +9,15 @@
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Catégories intéressées</ion-title>
+        <ion-title>Les ventes de la catégories</ion-title>
       </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <!-- <ion-icon name="add-circle" (click)="ajouterCheval()"></ion-icon> -->
   <ion-list inset>
-        <button ion-item *ngFor="let categ of lesCateg" (click)="lstVentesCateg(categ.code)">
-          {{categ.libelle}}
+        <button ion-item *ngFor="let vente of ventes" (click)="consulterVente(vente.idVente)">
+          {{vente.nom}}
         </button>
-    </ion-list>
+  </ion-list>
 </ion-content>

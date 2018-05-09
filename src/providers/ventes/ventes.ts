@@ -76,4 +76,19 @@ export class VentesProvider {
     });
   }
 
+  lstVentesCateg(idCateg: number) {
+    console.log("ventesProvider methode lstVentesCateg("+idCateg+")");
+
+    let key = "getVentesCateg",
+    url = this.apiUrl+"?key="+key+"&id="+idCateg;
+
+    return new Promise(resolve => {
+        this.http.get(url).subscribe(data => {
+            resolve(data);
+        }, err => {
+            console.log(err);
+        });
+    });
+  }
+
 }

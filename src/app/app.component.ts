@@ -7,7 +7,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // import { ListPage } from '../pages/list/list';
 import { LstChevauxPage } from '../pages/lst-chevaux/lst-chevaux';
 import { LstVentesPage } from '../pages/lst-ventes/lst-ventes';
-import { LstCoursesPage } from '../pages/lst-courses/lst-courses';
 import { LstClientsPage } from '../pages/lst-clients/lst-clients';
 
 @Component({
@@ -29,7 +28,6 @@ export class MyApp {
       // { title: 'List', component: ListPage },
       { title: 'Chevaux', component: LstChevauxPage },
       { title: 'Ventes', component: LstVentesPage },
-      { title: 'Courses', component: LstCoursesPage },
       { title: 'Clients', component: LstClientsPage }
     ];
 
