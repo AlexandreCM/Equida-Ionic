@@ -23,6 +23,7 @@ import { ConsulterCoursePage } from '../pages/consulter-course/consulter-course'
 import { LstClientsPage } from '../pages/lst-clients/lst-clients';
 import { ConsulterClientPage } from '../pages/consulter-client/consulter-client';
 import { LstCategInteresserPage } from '../pages/lst-categ-interesser/lst-categ-interesser';
+import { AjouterCategInteresserPage } from '../pages/ajouter-categ-interesser/ajouter-categ-interesser';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -52,7 +53,8 @@ import { VentesProvider } from '../providers/ventes/ventes';
 
     LstClientsPage,
     ConsulterClientPage,
-    LstCategInteresserPage
+    LstCategInteresserPage,
+    AjouterCategInteresserPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,8 @@ import { VentesProvider } from '../providers/ventes/ventes';
 
     LstClientsPage,
     ConsulterClientPage,
-    LstCategInteresserPage
+    LstCategInteresserPage,
+    AjouterCategInteresserPage
   ],
   providers: [
     StatusBar,

@@ -30,7 +30,6 @@ export class AjouterChevalPage {
      this.listerLesTypesCheval();
 
      this.form = fb.group({
-      // "cheval_id": ["", Validators.required],
       "cheval_nom": ["", Validators.required],
       "cheval_sexe": ["", Validators.required],
       "cheval_prix": ["", Validators.required],
@@ -49,13 +48,11 @@ export class AjouterChevalPage {
     this.chevauxProvider.getLesTypesCheval()
     .then(data => {
       this.types = data;
-      // console.log(this.types);
     });
   }
 
   ajouterCheval() : void
   {
-      // let 	cheval_id : number = this.form.controls["cheval_id"].value,
       let cheval_nom : string  = this.form.controls["cheval_nom"].value,
       cheval_sexe : string  = this.form.controls["cheval_sexe"].value,
       cheval_prix : number = this.form.controls["cheval_prix"].value,
@@ -64,7 +61,6 @@ export class AjouterChevalPage {
 
       let cheval : Cheval = new Cheval();
 
-      // cheval.id=	cheval_id;
       cheval.nom = cheval_nom;
       cheval.sexe = cheval_sexe;
       cheval.prix = cheval_prix;

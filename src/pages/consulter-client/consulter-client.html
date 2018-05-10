@@ -25,7 +25,8 @@
     <ion-card-content>Mail : {{ client.mail }}</ion-card-content>
     <ion-card-content>Pays : {{ client.unPays }}</ion-card-content>
 
-    <button ion-item (click)="lstCategInteresser(client.id)"> Ventes intéressées </button>
+    <button ion-item (click)="ajouterCategInteresser(client.id)">Ajouter une catégorie de ventes</button>
+    <button ion-item (click)="lstCategInteresser(client.id)">Ventes intéressées</button>
   </ion-card>
 
 

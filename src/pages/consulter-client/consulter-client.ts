@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ClientsProvider} from '../../providers/clients/clients';
 import { LstCategInteresserPage } from '../lst-categ-interesser/lst-categ-interesser';
+import { AjouterCategInteresserPage } from '../ajouter-categ-interesser/ajouter-categ-interesser';
 
 /**
  * Generated class for the ConsulterClientPage page.
@@ -42,7 +43,14 @@ export class ConsulterClientPage {
 
   lstCategInteresser(idClient: number){
     this.navCtrl.push(LstCategInteresserPage, {idClient: idClient});
-    console.log("methode lstCategInteresser("+idClient+") dans controlleur consulterClient");
+    console.log("methode lstCategInteresser("+idClient+") renvois vers lst-categ-interesser.ts");
   }
+
+  ajouterCategInteresser(idClient: number) {
+    this.navCtrl.push(AjouterCategInteresserPage, {idClient: idClient});
+    console.log("methode ajouterCategInteresser("+idClient+") revoi vers ajouter-categ-interesser.ts");
+  }
+
+
 
 }

@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Interesser } from '../../model/interesser';
 
 /*
   Generated class for the ClientsProvider provider.
@@ -44,6 +45,46 @@ export class ClientsProvider {
             console.log(err);
         });
     });
+  }
+
+  listerLesCategVentes() {
+      console.log("clientsProvider methode listerLesCategVentes()");
+
+      let key = "getLesCategVentes",
+      url : any = this.apiUrl+"?key="+key;
+
+      return new Promise(resolve => {
+          this.http.get(url)
+          .subscribe(data =>
+          {
+              resolve(data);
+          }, err => {
+              console.log(err);
+          });
+      });
+  }
+
+  ajouterCategInteresser(interesser: Interesser) {
+      console.log("clientsProvider methode ajouterCategInteresser(interesser: Interesser)");
+      console.log(interesser);
+
+      let key = "ajouterCategInteresser",
+      headers : any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options : any = JSON.stringify(interesser),
+      url : any = this.apiUrl+"?key="+key;
+
+      return new Promise(resolve => {
+          this.http.post(url, options, headers)
+          .subscribe(data =>
+          {
+              console.log("Promise ouiiiiii");
+              resolve(data);
+          }, err => {
+              console.log("Promise NNNOOOOOONNN !!! :'c");
+              console.log(options);
+              console.log(err);
+          });
+      });
   }
 
 }

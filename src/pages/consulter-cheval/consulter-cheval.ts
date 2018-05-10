@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ChevauxProvider} from '../../providers/chevaux/chevaux';
 import { LstCoursesChevalPage } from '../lst-courses-cheval/lst-courses-cheval';
-// import { Cheval } from '../../model/cheval';
 
 /**
  * Generated class for the ConsulterChevalPage page.
@@ -19,8 +18,6 @@ import { LstCoursesChevalPage } from '../lst-courses-cheval/lst-courses-cheval';
 
 export class ConsulterChevalPage {
 
-  // private cheval: Cheval = new Cheval();
-  // public cheval;
   private chevaux;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chevauxProvider: ChevauxProvider) {

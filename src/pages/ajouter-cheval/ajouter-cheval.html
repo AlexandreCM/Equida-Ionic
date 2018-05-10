@@ -15,7 +15,7 @@
 
 <ion-content padding>
     <div>
-        <!--
+
       <ion-item *ngIf="isEdited && !hideForm">
         <button
           ion-button
@@ -33,23 +33,11 @@
             <p>Maybe you'd like to edit an existing entry or add a new record?</p>
             <p>Simply go back to the home page and select the option you want to pursue.</p>
          </ion-item>
-     </div> -->
+     </div>
 
       <div *ngIf="!hideForm">
         <form [formGroup]="form" (ngSubmit)="ajouterCheval()">
           <ion-list>
-
-            <!-- <ion-item-group>
-              <ion-item-divider color="light">numéro de cheval *</ion-item-divider>
-              <ion-item>
-               <ion-input
-                  type="text"
-                  placeholder="Numéro..."
-                  formControlName="cheval_id"
-                  [(ngModel)]="id">
-                </ion-input>
-              </ion-item>
-            </ion-item-group> -->
 
             <ion-item-group>
               <ion-item-divider color="light">nom *</ion-item-divider>

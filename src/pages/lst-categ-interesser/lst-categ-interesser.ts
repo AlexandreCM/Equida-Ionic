@@ -42,4 +42,5 @@ export class LstCategInteresserPage {
     this.navCtrl.push(LstVentesCategPage, {idCateg: idCateg});
     console.log("methode lstVentesCateg("+idCateg+") revoi vers lst-ventes-categ.ts");
   }
+
 }
