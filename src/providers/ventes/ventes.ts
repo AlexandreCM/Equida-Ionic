@@ -61,21 +61,6 @@ export class VentesProvider {
     });
   }
 
-  lstCategInteresser(idVente: number) {
-    console.log("ventesProvider methode lstCategInteresser("+idVente+")");
-
-    let key = "getCategClient",
-    url = this.apiUrl+"?key="+key+"&id="+idVente;
-
-    return new Promise(resolve => {
-        this.http.get(url).subscribe(data => {
-            resolve(data);
-        }, err => {
-            console.log(err);
-        });
-    });
-  }
-
   lstVentesCateg(idCateg: number) {
     console.log("ventesProvider methode lstVentesCateg("+idCateg+")");
 

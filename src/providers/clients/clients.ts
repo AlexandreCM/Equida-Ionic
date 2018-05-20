@@ -47,6 +47,21 @@ export class ClientsProvider {
     });
   }
 
+  lstCategInteresser(idClient: number) {
+    console.log("clientsProvider methode lstCategInteresser("+idClient+")");
+
+    let key = "getCategClient",
+    url = this.apiUrl+"?key="+key+"&id="+idClient;
+
+    return new Promise(resolve => {
+        this.http.get(url).subscribe(data => {
+            resolve(data);
+        }, err => {
+            console.log(err);
+        });
+    });
+  }
+
   listerLesCategVentes() {
       console.log("clientsProvider methode listerLesCategVentes()");
 

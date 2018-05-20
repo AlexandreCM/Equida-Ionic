@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VentesProvider} from '../../providers/ventes/ventes';
 import { ConsulterChevalPage } from '../consulter-cheval/consulter-cheval';
-import { AjouterChevalPage } from '../ajouter-cheval/ajouter-cheval';
 
 /**
  * Generated class for the LstChevauxConcernerPage page.

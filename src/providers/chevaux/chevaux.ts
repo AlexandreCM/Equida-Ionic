@@ -73,7 +73,7 @@ export class ChevauxProvider {
 
       let key = "getLesTypesCheval",
       url : any = this.apiUrl+"?key="+key;
-      
+
       return new Promise(resolve => {
           this.http.get(url)
           .subscribe(data =>
@@ -99,10 +99,10 @@ export class ChevauxProvider {
           this.http.post(url, options, headers)
           .subscribe(data =>
           {
-              console.log("Promise ouiiiiii");
+              console.log("Promise OK");
               resolve(data);
           }, err => {
-              console.log("Promise NNNOOOOOONNN !!! :'c");
+              console.log("Promise NON");
               console.log(options);
               console.log(err);
           });

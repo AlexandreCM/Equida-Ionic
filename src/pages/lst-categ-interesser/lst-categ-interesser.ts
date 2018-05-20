@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { VentesProvider} from '../../providers/ventes/ventes';
+import { ClientsProvider} from '../../providers/clients/clients';
 import { LstVentesCategPage } from '../lst-ventes-categ/lst-ventes-categ';
 
 /**
@@ -19,7 +19,7 @@ export class LstCategInteresserPage {
 
     private lesCateg;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ventesProvider : VentesProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public clientsProvider : ClientsProvider) {
       console.log("constr lstCategClient");
       let idClient = this.navParams.get("idClient");
       this.lstCategInteresser(idClient);
@@ -31,7 +31,7 @@ export class LstCategInteresserPage {
 
   lstCategInteresser(idClient: number) {
     console.log("methode lstCategInteresser("+idClient+")");
-    this.ventesProvider.lstCategInteresser(idClient)
+    this.clientsProvider.lstCategInteresser(idClient)
     .then(data => {
       this.lesCateg = data;
       console.log(this.lesCateg);
