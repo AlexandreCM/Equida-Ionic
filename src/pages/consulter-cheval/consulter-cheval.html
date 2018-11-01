@@ -26,6 +26,7 @@
     <ion-card-content>Prix : {{cheval.prixDepart}}</ion-card-content>
     <ion-card-content>Type : {{cheval.libelle}}</ion-card-content>
 
+    <button ion-item (click)="modifierCheval(cheval)"> Modifier </button>
     <button ion-item (click)="getLesCoursesCheval(cheval.id)"> Courses participées </button>
   </ion-card>
 

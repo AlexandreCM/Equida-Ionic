@@ -13,7 +13,6 @@ import { Cheval } from '../../model/cheval';
 @Injectable()
 export class ChevauxProvider {
 
-  // private baseURI: string  = "http://localhost/IONAC/gestionChevaux.php/";
   apiUrl = 'http://localhost/IONAC/restApi/index.php';
 
   constructor(public http: HttpClient) {
@@ -91,6 +90,29 @@ export class ChevauxProvider {
       // console.log(cheval);
 
       let key = "ajouterCheval",
+      headers : any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options : any = JSON.stringify(cheval),
+      url : any = this.apiUrl+"?key="+key;
+
+      return new Promise(resolve => {
+          this.http.post(url, options, headers)
+          .subscribe(data =>
+          {
+              console.log("Promise OK");
+              resolve(data);
+          }, err => {
+              console.log("Promise NON");
+              console.log(options);
+              console.log(err);
+          });
+      });
+  }
+
+  modifierCheval(cheval: Cheval) {
+      console.log("chevauxProvider methode modifierCheval(cheval: Cheval)");
+      // console.log(cheval);
+
+      let key = "updateCheval",
       headers : any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options : any = JSON.stringify(cheval),
       url : any = this.apiUrl+"?key="+key;

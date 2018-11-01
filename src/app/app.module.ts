@@ -11,6 +11,7 @@ import { LstChevauxPage } from '../pages/lst-chevaux/lst-chevaux';
 import { ConsulterChevalPage } from '../pages/consulter-cheval/consulter-cheval';
 import { LstCoursesChevalPage } from '../pages/lst-courses-cheval/lst-courses-cheval';
 import { AjouterChevalPage } from '../pages/ajouter-cheval/ajouter-cheval';
+import { ModifierChevalPage } from '../pages/modifier-cheval/modifier-cheval';
 
 import { LstVentesPage } from '../pages/lst-ventes/lst-ventes';
 import { ConsulterVentePage } from '../pages/consulter-vente/consulter-vente';
@@ -42,6 +43,7 @@ import { VentesProvider } from '../providers/ventes/ventes';
     ConsulterChevalPage,
     LstCoursesChevalPage,
     AjouterChevalPage,
+    ModifierChevalPage,
 
     LstVentesPage,
     ConsulterVentePage,
@@ -71,6 +73,7 @@ import { VentesProvider } from '../providers/ventes/ventes';
     ConsulterChevalPage,
     LstCoursesChevalPage,
     AjouterChevalPage,
+    ModifierChevalPage,
 
     LstVentesPage,
     ConsulterVentePage,

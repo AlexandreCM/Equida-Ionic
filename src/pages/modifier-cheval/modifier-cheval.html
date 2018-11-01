@@ -1,5 +1,5 @@
 <!--
-  Generated template for the AjouterChevalPage page.
+  Generated template for the ModifierChevalPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>ajouterCheval</ion-title>
+    <ion-title>Modification cheval</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -36,7 +36,7 @@
      </div>
 
       <div *ngIf="!hideForm">
-        <form [formGroup]="form" (ngSubmit)="ajouterCheval()">
+        <form [formGroup]="form" (ngSubmit)="modifierCheval()">
           <ion-list>
 
             <ion-item-group>
@@ -98,7 +98,7 @@
                 color="primary"
                 text-center
                 block
-                [disabled]="!form.valid">Ajouter
+                [disabled]="!form.valid">Modifier
               </button>
             </ion-item>
 

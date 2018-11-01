@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ChevauxProvider} from '../../providers/chevaux/chevaux';
 import { LstCoursesChevalPage } from '../lst-courses-cheval/lst-courses-cheval';
+import { ModifierChevalPage } from '../modifier-cheval/modifier-cheval';
+import { Cheval } from '../../model/cheval';
 
 /**
  * Generated class for the ConsulterChevalPage page.
@@ -38,7 +40,7 @@ export class ConsulterChevalPage {
         this.chevauxProvider.consulterCheval(idCheval)
         .then(data => {
             this.chevaux = data;
-            console.log(data);
+            // console.log(data);
         });
         console.log("fin methode consulterCheval(idCheval) appelant chevauxProvider");
   }
@@ -46,6 +48,12 @@ export class ConsulterChevalPage {
   getLesCoursesCheval(idCheval: number){
     this.navCtrl.push(LstCoursesChevalPage, {idCheval: idCheval});
     console.log("methode getLesCoursesCheval("+idCheval+") dans controlleur consulterCheval");
+  }
+
+  modifierCheval(cheval: Cheval) {
+      this.navCtrl.push(ModifierChevalPage, {cheval: cheval});
+      // console.log(cheval);
+    console.log("methode modifierCheval(cheval: Cheval) revoi vers modifer-cheval.ts");
   }
 
 }

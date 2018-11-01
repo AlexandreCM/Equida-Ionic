@@ -12,10 +12,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CoursesProvider {
 
-  // private baseURI: string  = "http://localhost/IONAC/";
   apiUrl = 'http://localhost/IONAC/restApi/index.php';
 
-  constructor(public http: HttpClient) {
+    constructor(public http: HttpClient) {
     console.log('Hello CoursesProvider Provider');
   }
 
@@ -24,7 +23,7 @@ export class CoursesProvider {
 
       let key = "getLesCourses",
       url = this.apiUrl+"?key="+key;
-      
+
       return new Promise(resolve => {
           this.http.get(url).subscribe(data => {
               resolve(data);
